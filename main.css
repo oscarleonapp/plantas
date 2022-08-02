@@ -1,0 +1,85 @@
+body {
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    line-height: 1.4;
+    display: grid;
+    place-items: center;
+    min-height: 95vh;
+  }
+  
+  div[role="img"] {
+    width: 50vmin;
+    aspect-ratio: 1920 / 2402;
+    background-image: url("https://assets.codepen.io/605876/max-bender-city-scape.jpeg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+  }
+  
+  @media screen and (prefers-reduced-motion: no-preference) {
+    div[role="img"] {
+      transition: all 0.2s ease-out;
+    }
+  }
+  
+  #bus:checked ~ div[role="img"] {
+    background-position: 29% 71%;
+    background-size: 600%;
+  }
+  
+  #car:checked ~ div[role="img"] {
+    background-position: 70% 76%;
+    background-size: 550%;
+  }
+  
+  #walk:checked ~ div[role="img"] {
+    background-position: 77% 67%;
+    background-size: 1200%;
+  }
+  
+  #mail:checked ~ div[role="img"] {
+    background-position: 71% 68%;
+    background-size: 800%;
+  }
+  
+  #stop:checked ~ div[role="img"] {
+    background-position: 0% 71%;
+    background-size: 600%;
+  }
+  
+  #peak:checked ~ div[role="img"] {
+    background-position: 52% 39%;
+    background-size: 800%;
+  }
+  
+  /* Layout */
+  
+  fieldset {
+    display: grid;
+    grid-template-columns:  50vmin 5em 1.5em;
+    gap: .25em 1em;
+    max-width: 33em;
+  }
+  
+  fieldset > * {
+    align-self: start;
+  }
+  
+  fieldset div[role="img"] {
+    grid-row: 1 / span 14;
+  }
+  
+  legend {
+    margin-left: calc(50vmin + 1em);
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 80%;
+    padding: 1em;
+    text-align: center;
+    background-color: #fff;
+  }
